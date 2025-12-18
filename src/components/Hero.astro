@@ -1,0 +1,27 @@
+---
+import { Mail, Linkedin, Github, GraduationCap } from 'lucide-astro';
+
+const name = "Nowreen Tarannum Rafa";
+const email = "nowreen.rafa@gmail.com";
+---
+<header class="mb-16">
+  <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">{name}</h1>
+  <p class="mt-4 text-lg text-slate-600">
+    Computer Science and Engineering graduate from BRAC University with a CGPA of 3.94/4.00. 
+    Awarded Highest Distinction and recognized 10 times on the Vice Chancellor's Honor List.
+  </p>
+  <div class="mt-6 flex gap-4 text-blue-600 font-medium">
+    <a href={`mailto:${email}`} target="_blank" class="flex items-center gap-1 text-blue-600 font-medium hover:text-blue-800 transition-colors">
+        <Mail size={18} />
+        Email
+    </a>
+    <a href="https://www.linkedin.com/in/nowreen-tarannum-rafa-815151283/" target="_blank" class="flex items-center gap-1 text-blue-600 font-medium hover:text-blue-800 transition-colors">
+        <Linkedin size={18} />
+        LinkedIn
+    </a>
+    <a href="https://github.com/nowreenrafa22" target="_blank" class="flex items-center gap-1 text-blue-600 font-medium hover:text-blue-800 transition-colors">
+        <Github size={18} />
+        GitHub
+    </a>
+  </div>
+</header>

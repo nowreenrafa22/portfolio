@@ -1,0 +1,41 @@
+---
+// Selected Projects
+const projects = [
+  {
+    name: "Explainable Detection of Online Sexism", 
+    tech: "NLP, Deep Learning", 
+    desc: "Developed a machine learning model for identifying sexist content with an emphasis on explainability for safer digital environments.",
+    url: "https://github.com/nowreenrafa22/Explanable-Detection-of-Online-Sexism"
+  },
+  {
+    name: "Training Multi-Layer Neural Network", 
+    tech: "Image Classification", 
+    desc: "Engineered a neural network model that outperformed logistic regression benchmarks in accuracy and F1 score.",
+    url: "https://github.com/nowreenrafa22/Training-a-Five-Layer-Neural-Network"
+  },
+  {
+    name: "Wine Quality Prediction", 
+    tech: "Supervised Learning", 
+    desc: "Led a predictive analytics project using various machine learning techniques to model wine quality.",
+    url: "https://github.com/nowreenrafa22/Wine-Quality-Prediction"
+  },
+  {
+    name: "Network Infrastructure with Packet Tracer", 
+    tech: "IP Subnetting, TCP/IP", 
+    desc: "Designed and implemented a robust network infrastructure ensuring optimal performance and security.",
+    url: "https://github.com/nowreenrafa22/Network-Architecture-Project"
+  }
+];
+---
+<section>
+  <h2 class="text-2xl font-bold mb-6 border-b pb-2">Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {projects.map((project) => (
+      <a href={project.url} target="_blank" class="border border-slate-200 p-5 rounded-lg hover:shadow-md transition-shadow">
+        <h3 class="font-bold text-slate-800">{project.name}</h3>
+        <p class="text-xs font-mono text-slate-500 mb-2 uppercase tracking-widest">{project.tech}</p>
+        <p class="text-slate-600 text-sm">{project.desc}</p>
+      </a>
+    ))}
+  </div>
+</section>

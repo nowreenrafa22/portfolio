@@ -1,0 +1,37 @@
+---
+// Research & Publications
+const publications = [
+  {
+    title: "Exploration and Mitigation of Gender Bias in Word Embeddings from Transformer-based Language Models", 
+    tags: ["NLP", "Word Embeddings", "Transformers"], 
+    details: "Detected gender bias in transformer models and introduced a novel metric to mitigate bias via continued pretraining.",
+    url: "https://arxiv.org/abs/2511.00519"
+  },
+  {
+    title: "Detection and Correction of Grammatical Errors", 
+    tags: ["NLP", "Machine Translation", "Tokenization"], 
+    details: "Advanced GEC in NLP by adapting the gT5 model for multilingual use and employing the C4 200M GEC dataset.",
+    url: "https://github.com/nowreenrafa22/Detection-and-Correction-of-Grammatical-Errors"
+  }
+];
+---
+<section class="mb-16">
+  <h2 class="text-2xl font-bold mb-6 border-b pb-2">Research & Publications</h2>
+  <div class="space-y-8">
+    {publications.map(pub => (
+      <div>
+        <h3 class="text-lg font-semibold text-blue-700 leading-tight">
+            <a href={pub.url} target="_blank">
+                {pub.title}
+            </a>
+        </h3> 
+        <div class="flex gap-2 my-2">
+          {pub.tags.map(tag => (
+            <span class="text-[10px] uppercase tracking-wider bg-slate-200 px-2 py-0.5 rounded text-slate-600 font-bold">{tag}</span>
+          ))}
+        </div>
+        <p class="text-slate-600 text-sm">{pub.details}</p>
+      </div>
+    ))}
+  </div>
+</section>

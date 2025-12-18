@@ -1,0 +1,30 @@
+---
+// Professional Experience
+const job = {
+  role: "Associate Software Engineer", 
+  company: "WellDev Ltd", 
+  period: "September 2024 - Present", 
+  bullets: [
+    "Engineered scalable full-stack web applications using Ruby on Rails and React.",
+    "Collaborated across cross-functional teams to deploy user-centric features.",
+    "Enforced high code quality standards through rigorous code reviews and CI/CD integration."
+  ]
+};
+---
+<section class="mb-16">
+  <h2 class="text-2xl font-bold mb-6 border-b pb-2">Current Role</h2>
+  <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h3 class="text-xl font-bold text-slate-800">{job.role}</h3>  
+        <p class="text-blue-600 font-medium">
+            <a href="https://welldev.io" target="_blank">{job.company}</a>
+        </p>
+      </div>
+      <span class="text-sm font-medium text-slate-500">{job.period}</span>
+    </div>
+    <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+      {job.bullets.map(bullet => <li>{bullet}</li>)}
+    </ul>
+  </div>
+</section>
